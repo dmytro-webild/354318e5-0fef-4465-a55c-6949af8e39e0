@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import { Halant } from "next/font/google";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ServiceWrapper } from "@/components/ServiceWrapper";
+import Tag from "@/tag/Tag";
+import { getVisualEditScript } from "@/utils/visual-edit-script";
+import { Roboto } from "next/font/google";
+
+
+
+export const metadata: Metadata = {
+  title: 'B Padel - Centro Padel Indoor | 3 Campi Professionali',
+  description: 'B Padel è il centro padel indoor con 3 campi professionali. Prenota online, partecipa a tornei e unisciti alla nostra comunità di giocatori appassionati.',
+};
+
+const roboto = Roboto({
+  variable: "--font-roboto",  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <ServiceWrapper>
+        <body className={`${roboto.variable} antialiased`}>
+          <Tag />
+          {children}
+          <script
+              dangerouslySetInnerHTML={{
+                  __html: `${getVisualEditScript()}`
+          }}
+        />
+        </body>
+      </ServiceWrapper>
+    </html>
+  );
+}
