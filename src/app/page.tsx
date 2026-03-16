@@ -19,7 +19,7 @@ export default function LandingPage() {
       borderRadius="soft"
       contentWidth="smallMedium"
       sizing="largeSmallSizeMediumTitles"
-      background="noise"
+      background="circleGradient"
       cardStyle="gradient-mesh"
       primaryButtonStyle="shadow"
       secondaryButtonStyle="radial-glow"
@@ -44,7 +44,7 @@ export default function LandingPage() {
         <HeroSplitTestimonial
           title="Il Tuo Nuovo Spazio Padel"
           description="B Padel è il centro padel indoor più moderno della zona. Con 3 campi professionali, illuminazione LED, e una comunità di giocatori appassionati, è il luogo perfetto per giocare, imparare e divertirsi."
-          background={{ variant: "noise" }}
+          background={{ variant: "animated-grid" }}
           testimonials={[
             {
               name: "Marco Rossi",              handle: "@marco_padel",              testimonial: "Migliore centro padel della città! Campi impeccabili e staff fantastico.",              rating: 5,
